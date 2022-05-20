@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { moveClockwise, moveCounterClockwise } from '../state/action-creators';
+import * as actionCreators from '../state/action-creators'
 
- 
- export function Wheel(props) {
-  
+export function Wheel(props) {
+
   const { wheel, moveClockwise, moveCounterClockwise } = props
 
   const handleClockwiseClick = evt => {
@@ -36,4 +35,5 @@ import { moveClockwise, moveCounterClockwise } from '../state/action-creators';
     </div>
   )
 }
-export default connect(st => st, {moveClockwise, moveCounterClockwise})(Wheel)
+
+export default connect(st => st, actionCreators)(Wheel)
