@@ -37,3 +37,5 @@ export function Wheel(props) {
 }
 
 export default connect(st => st, actionCreators)(Wheel)
+
+//fixed wheel from b disappearing when clicked in one direction too many times
