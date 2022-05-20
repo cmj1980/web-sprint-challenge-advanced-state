@@ -3,17 +3,17 @@ import * as types from './action-types';
 import axios from './action-types';
 
 
-export function moveClockwise() { 
+export function moveClockwise() {
   return{
     type: types.MOVE_CLOCKWISE
- }
-}
-
-export function moveCounterClockwise() { 
-  return {
-    types: types.MOVE_COUNTERCLOCKWISE
   }
-}
+ }
+
+export function moveCounterClockwise() {
+  return{
+    type: types.MOVE_COUNTERCLOCKWISE
+  }
+ }
 
 export function selectAnswer() { }
 
