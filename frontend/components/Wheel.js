@@ -1,10 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
+import { moveClockwise, moveCounterClockwise } from '../state/action-creators';
 
-export default function Wheel(props) {
+ 
+const Wheel = (props) => {
+
+  const { wheel, moveClockwise, moveCounterClockwise } = props
+
+  const handleClockWise = () => {
+    moveClockwise()
+  }
+
+  const handleCounterClockWise = () => {
+    moveCounterClockwise()
+  }
+
+
   return (
     <div id="wrapper">
       <div id="wheel">
-        <div className="cog active" style={{ "--i": 0 }}>B</div>
+        <div className={`${wheel}` == 0 ? "cog active" : "cog"} style={{ "--i": 0 }}>{`${wheel}` == 0 ? "B" : ""}</div>
         <div className="cog" style={{ "--i": 1 }}></div>
         <div className="cog" style={{ "--i": 2 }}></div>
         <div className="cog" style={{ "--i": 3 }}></div>
@@ -18,3 +33,4 @@ export default function Wheel(props) {
     </div>
   )
 }
+export default connect(st => st, {moveClockwise, moveCounterClockwise})(Wheel)
