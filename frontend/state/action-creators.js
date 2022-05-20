@@ -15,15 +15,35 @@ export function moveCounterClockwise() {
   }
  }
 
-export function selectAnswer() { }
+export function selectAnswer() { 
+  return{
+    type: types.SET_SELECTED_ANSWER
+  }
+}
 
-export function setMessage() { }
+export function setMessage() { 
+  return{
+    type: types.SET_INFO_MESSAGE
+  }
+}
 
-export function setQuiz() { }
+export function setQuiz() { 
+  return{
+    type: types.SET_QUIZ_INTO_STATE
+  }
+}
 
-export function inputChange() { }
+export function inputChange() { 
+  return{
+    type: types.INPUT_CHANGE
+  }
+}
 
-export function resetForm() { }
+export function resetForm() { 
+  return{
+    type: types.RESET_FORM
+  }
+}
 
 // ❗ Async action creators
 export function fetchQuiz() {
